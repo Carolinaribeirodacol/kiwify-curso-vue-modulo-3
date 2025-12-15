@@ -1,5 +1,7 @@
-<script setup></script>
+<script setup>
+import LayoutDefault from './layouts/LayoutDefault.vue'
+</script>
 
 <template>
-  <RouterView />
+  <LayoutDefault />
 </template>
