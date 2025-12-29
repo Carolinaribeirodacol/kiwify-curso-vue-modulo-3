@@ -1,21 +1,16 @@
 <template>
-  <!-- <main class="p-10">
-    <h1 class="text-2xl">Home Page</h1>
-    <button class="btn btn-primary" @click="handleAbout()">about</button>
-  </main> -->
+  <PageDefault :pageTitle="`Home Page ${count}`">
+    <div>
+      <button class="btn btn-primary" @click="count++">Count +1</button>
+    </div>
 
-  <PageDefault>
-    
+    <p>Conteúdo aqui de teste</p>
   </PageDefault>
 </template>
 
 <script setup>
-import PageDefault from '@/components/PageDefault.vue';
-// import { useRouter } from 'vue-router'
+import PageDefault from '@/components/PageDefault.vue'
+import { ref } from 'vue'
 
-// const router = useRouter()
-
-// function handleAbout() {
-//   router.push('/about')
-// }
+const count = ref(1)
 </script>

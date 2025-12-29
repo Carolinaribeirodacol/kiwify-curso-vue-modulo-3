@@ -3,10 +3,8 @@ import PageDefault from '@/components/PageDefault.vue'
 </script>
 
 <template>
-  <!-- <div class="about">
-    <h1 class="text-2xl">About Page</h1>
-  </div> -->
-  <PageDefault> </PageDefault>
+  <PageDefault page-title="About Page"> </PageDefault>
+  <p>Conteudo de About</p>
 </template>
 
 <style></style>

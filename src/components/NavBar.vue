@@ -28,6 +28,10 @@ const menus = [
     label: 'About',
     routeName: '/about',
   },
+  {
+    label: 'Article',
+    routeName: '/article',
+  },
 ]
 
 function handlerRouteGoTo(routeName) {
