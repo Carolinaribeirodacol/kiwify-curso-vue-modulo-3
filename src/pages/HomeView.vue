@@ -10,16 +10,30 @@
       </div>
 
       <p>Conteúdo aqui de teste</p>
+
+      <BasicForm v-model:name="form.name" v-model:age="form.age" @sendForm="sendForm" />
+
+      <span> Form externo homeview </span>
+
+      <pre>
+        {{ form }}
+      </pre>
     </div>
   </PageDefault>
 </template>
 
 <script setup>
+import BasicForm from '@/components/BasicForm.vue'
 import PageDefault from '@/components/PageDefault.vue'
 import { ref } from 'vue'
 
 const count = ref(1)
 const loading = ref(false)
+
+const form = ref({
+  name: '',
+  age: 0,
+})
 
 function handleGetAPI() {
   loading.value = true
@@ -27,5 +41,9 @@ function handleGetAPI() {
   setTimeout(() => {
     loading.value = false
   }, 2000)
+}
+
+function sendForm() {
+  alert('Form enviado')
 }
 </script>
