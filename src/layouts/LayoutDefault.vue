@@ -23,4 +23,7 @@
 
 <script setup>
 import NavBar from '@/components/NavBar.vue'
+import { provide } from 'vue' // parecido com a funcionalidade do pinia, serve para gerenciamento de estado simples
+
+provide(/* key */ 'message', /* value */ 'hello!')
 </script>

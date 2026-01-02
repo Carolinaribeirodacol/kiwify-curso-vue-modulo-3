@@ -1,5 +1,7 @@
 <template>
   <div class="card bg-base-100 w-96 shadow-sm mt-10">
+    {{ message }}
+
     <div class="card-body">
       <h2 class="card-title">Cadastro simples</h2>
 
@@ -25,6 +27,8 @@
 </template>
 
 <script setup>
+import { inject } from 'vue'
+
 const emit = defineEmits(['sendForm'])
 
 const name = defineModel('name', { type: String })
@@ -33,4 +37,6 @@ const age = defineModel('age', { type: Number })
 function sendForm() {
   emit('sendForm')
 }
+
+const message = inject('message')
 </script>
